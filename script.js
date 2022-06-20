@@ -18,7 +18,22 @@ function divide(a, b) {
     return a / b;
 }
 
-console.log(add(85, 15));
-console.log(subtract(85, 15));
-console.log(multiply(85, 15));
-console.log(divide(85, 15));
+// Create the operate function that takes an operator and 2 nums and
+//  uses the functions above
+function operate(operator, num1, num2) {
+    switch (operator) {
+        case "+":
+            return add(num1, num2);
+        case "-":
+            return subtract(num1, num2);
+        case "*":
+            return multiply(num1, num2);
+        case "/":
+            return divide(num1, num2);
+    }
+}
+
+console.log(operate('*', 5, 9));
+console.log(operate('/', 10, 2));
+console.log(operate('-', 7, 4));
+console.log(operate('+', 15, 6));

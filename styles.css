@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --bluegray: #555b6e;
+    --darkergreen: #89b0ae;
+    --lightergreen: #bee3db;
+    --offwhite: #faf9f9;
+    --tan: #ffd6ba;
+    --offblack: #323540;
+}
+
+body {
+    height: 75vh;
+    min-height: 500px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--offblack);
+}
+
+#calculator-body {
+    display: grid;
+    width: 400px;
+    height: 600px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.25fr 0.75fr 4fr;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--bluegray);
+}
+
+.display {
+    grid-area: 1 / 1 / 1 / -1;
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: var(--offwhite);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.clear {
+    background-color: var(--darkergreen);
+}
+
+.back {
+    background-color: var(--lightergreen);
+}
+
+.top-buttons {
+    gap: 10px;
+    grid-area: 2 / 1 / 2 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.rows {
+    grid-area: 3 / 1 / -1 / -1;
+    display: grid;
+}
+
+button {
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
